@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keyword" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Hege Refsnes">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: auto;
+        }
+        
+        .bai1 {
+            width: 50%;
+            margin-top: 50px;
+            text-align: center;
+            background-color: #ffd078;
+            line-height: 60px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+        }
+        
+        .bai2 {
+            width: 350px;
+            font-size: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+            margin-top: 30px;
+        }
+        
+        .bai3 {
+            width: 70%;
+            background-color: #ffd078;
+            margin-top: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+        }
+        
+        .bai4a {
+            margin-top: 30px;
+            width: 150px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+        }
+        
+        .bai4b {
+            margin-top: 30px;
+            width: 250px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+            background-color: #ffd078;
+        }
+        .bai5a{
+            margin-top: 30px;
+            width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+            padding-left: 5px;
+        }
+        .bai5a >a{
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .bai5a >h2{
+            margin-bottom: 15px;
+        }
+        .bai5a >ul{
+            margin-bottom: 15px;
+        }
+        .bai5b{
+            width: 600px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+            margin-top: 30px;
+            padding-left: 5px;
+        }
+        .bai5b >a{
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .bai5b >h2{
+            margin-bottom: 15px;
+        }
+        .bai5b >p{
+            margin-bottom: 15px;
+        }
+        .bai6a >table{
+            margin-top: 30px;
+            width: 300px;
+            height: 250px;
+            border: solid 10px #e4c791;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            border-spacing: 3;
+            background-color: #e4c791;
+        }
+        #orange{
+            background-color: orange;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #white{
+            background-color: white;
+        }
+        .bai6b {
+            /* max-width: 1000px;
+            max-height: 200px;
+            position: relative; */
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .bai6b1{
+            margin-top: 30px;
+        }
+        .bai6b2 {
+            width: 250px;
+            height: 160px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            margin-top: 360px;
+           
+        }
+        .bai6b3 {
+            width: 250px;
+            height: 160px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            margin-top: 360px;
+        }
+        .bai6b1 >table{
+            width: 250px;
+            height: 500px;
+            background-color: #ffd078;
+            margin-bottom: 3;
+            margin-left: 30px;
+        }
+        .bai6b2 >table{
+            width: 150px;
+            height: 100px;
+            text-align: center;
+            margin-left: 7px;
+            margin-top: 30px;
+        }
+        .bai6b3 >table{
+            width: 120px;
+            height: 100px;
+            margin-left: 7px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .bai6c{
+            margin-top: 30px;
+            width: 480px;
+            height: 180px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            background-color: #ffd078;
+            text-align: center;
+            /* border-color: rgb(184, 59, 163); */
+        }
+        .bai6c >table{
+            width: 450px;
+            height: 150px;
+            background-color: rgb(237, 146, 219);
+        }
+        .bai6c table td:first-child{
+            background-color: aqua;
+        }
+        #trang{
+            background-color: rgb(245, 217, 245);
+            color: rgb(55, 115, 184);
+            font-weight: bold;
+            font-style: italic;
+        }
+        .bai7{
+            margin-top: 30px;
+            width: 770px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+           
+        }
+        .bai71{
+            width: 770px;
+            height: 135px;
+        }
+        .bai72{
+            margin-top: 2px;
+            width: 770px;
+            height: 135px;
+        }
+        .bai73{
+            margin-top: 2px;
+            width: 770px;
+            height: 135px;
+        }
+        .bai74{
+            margin-top: 2px;
+            width: 770px;
+            height: 90px;
+        }
+        .bai75{
+            margin-top: 2px;
+            width: 770px;
+            height: 90px;
+        }
+        .bai71 >p{
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-right: 7px;
+        }
+        .bai72 >p{
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-right: 7px;
+        }
+        .bai73 >p{
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-right: 7px;
+        }
+        .bai74 >p{
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-right: 7px;
+            text-align: justify;
+        }
+        .bai75 >p{
+            margin-top: 10px;
+            margin-left: 15px;
+            margin-right: 7px;
+            text-align: justify;
+        }
+        .bai71>p>img{
+            width: 70px;
+            height: 70px;
+            margin-top: 10px;
+        }
+        .bai72>p>img{
+            width: 70px;
+            height: 70px;
+        }
+        .bai73>p>img{
+            width: 70px;
+            height: 70px;
+        }
+        .bai74>p>img{
+            width: 70px;
+            height: 70px;
+        }
+        .bai75>p>img{
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+    <div class="bai1">
+        <h1>Heading Centering</h1>
+        <hr>
+        <h1>Heading Level #1</h1>
+        <h2>Heading Level #2</h2>
+        <h3>Heading Level #3</h3>
+        <h4>Heading Level #4</h4>
+        <h5>Heading Level #5</h5>
+        <h6>Heading Level #6</h6>
+    </div>
+    <div class="bai2">
+        <p>One particular book which is recommended reading is <u>The Street Lawyer</u> by <u>John Grisham</u>. This book is about a lawyer who begins re-evaluationg his priorities in life when a bad incident occurs within his law firm. Consequently, he
+            becomes acquainted with the inner city streets, and realizes the harsh existence of the homeless, and vows to give them a chance in the courts.
+            <u>The Street Lawyer</u> is a
+            <i><b>great</b></i> book. It is <i><b>well written</b></i> and <i><b>interesting.</b></i> Other books by
+            <u>Jonhn Grisham</u> include <u>The Firm</u>. <u>The Pelican Brief</u>, and <u>The Client</u>.</p>
+    </div>
+    <div class="bai3">
+        <div class="doan1" style="margin-left: 7px;">
+            <h2>High Flying</h2>
+            <span>I gazed down into valleys,<br> At the snowcaps white as cream,<br> Then soared above the puffy clouds &#151;<br>Too bad it was a dream &#33;</span>
+        </div>
+        <div class="doan2" style="text-align: center;">
+            <h2>High Flying</h2>
+            <span>I gazed down into valleys,<br> At the snowcaps white as cream,<br> Then soared above the puffy clouds &#151;<br>Too bad it was a dream &#33;</span>
+        </div>
+        <div class="doan3" style="text-align: right;margin-right: 7px;">
+            <h2>High Flying</h2>
+            <span>I gazed down into valleys,<br> At the snowcaps white as cream,<br> Then soared above the puffy clouds &#151;<br>Too bad it was a dream &#33;</span>
+        </div>
+    </div>
+    <div class="bai4a">
+        <ol style="list-style: upper-roman;">
+            <li>Item one</li>
+            <li>Item two</li>
+            <li>Item three</li>
+            <li>Item four
+                <ol style="list-style: lower-roman;">
+                    <li>Item 4.1</li>
+                    <li>Item 4.2</li>
+                    <li>Item 4.3</li>
+                </ol>
+            </li>
+            <li>Item Five</li>
+        </ol>
+    </div>
+    <div class="bai4b">
+        <ol style="list-style: upper-roman;">
+            <li>Oakfield Middle School</li>
+            <ol style="list-style: upper-alpha;">
+                <li> Tod Hastings</li>
+                <ol>
+                    <li> Math(#3)</li>
+                    <li> History(#2)</li>
+                    <li> Sience(#2)</li>
+                </ol>
+                <li> Bonita Chavez</li>
+                <ol>
+                    <li> Math(#1)</li>
+                    <li> History(#4)</li>
+                    <li> Sience(#3)</li>
+                </ol>
+            </ol>
+            <li> Parkview Mid-High</li>
+            <ol style="list-style: upper-alpha;">
+                <li> Jacque Russell</li>
+                <ol>
+                    <li> Math(#2)</li>
+                    <li> History(#5)</li>
+                    <li> Sience(#4)</li>
+                </ol>
+                <li> Dwayne Clancy</li>
+                <ol>
+                    <li> Math(#4)</li>
+                    <li> History(#7)</li>
+                    <li> Sience(#1)</li>
+                </ol>
+            </ol>
+            <li style="list-style: none;">.</li>
+            <li style="list-style: none;">.</li>
+            <li style="list-style: none;">.</li>
+            <li> Jackson Heights Middle School</li>
+            <ol style="list-style: upper-alpha;">
+                <li> Chritine Quon</li>
+                <ol>
+                    <li> Math(#7)</li>
+                    <li> History(#6)</li>
+                    <li> Sience(#5)</li>
+                </ol>
+                <li> Roger Dietz</li>
+                <ol>
+                    <li> Math(#5)</li>
+                    <li> History(#8)</li>
+                    <li> Sience(#7)</li>
+                </ol>
+            </ol>
+        </ol>
+    </div>
+    <div class="bai5a" >
+        <h2>Example Cafe Menu</h2>
+        <br>
+        <a href="#">Starter |</a>
+        <a href="#">Main Courses |</a>
+        <a href="#">Desserts</a>
+        <h2>Starters</h2>
+        <ul>
+            <li> Chestnut and Mushroom Goujons <a href="#">(v)</a></li>
+            <li> Goat Cheese Salad <a href="#">(v)</a></li>
+            <li> Honey Soy Chicken Kebabs</li>
+            <li> Seafood Salad</li>
+        </ul>
+        <a href="#">Back to top</a>
+        <h2>Main courses</h2>
+        <ul>
+            <li> Spinach and Ricotta Roulade <a href="#">(v)</a></li>
+            <li> Beef Tournafos with Mustard and Dill Sauce</li>
+            <li> Roast Chicken Salad</li>
+            <li> Icelandic Cod with Parsley Sauce</li>
+            <li> Mushroom Wellington<a href="#">(v)</a></li>
+        </ul>
+        <a href="#">Back to top</a>
+        <h2>Desserts</h2>
+        <ul>
+            <li> Lemon Sorbet<a href="#">(v)</a></li>
+            <li> Chocolate Mud Pie<a href="#">(v)</a></li>
+            <li> Pecan Pie<a href="#">(v)</a></li>
+            <li> Selection of Fine Cheeses from Around the World</li>
+        </ul>
+        <a href="#">Back to top</a>
+        <br>
+        <span>Items marked with a (v) are suitable for vegetarians.</span>
+    </div>
+    <div class="bai5b">
+        <h2>Linking and Navigation</h2>
+        <span>This page covers the following topics:</span>
+        <ul>
+            <li><a href="#">URLs</a></li>
+            <li><a href="#">Source Anchors</a></li>
+            <li><a href="#">Destination Anchors</a></li>
+            <li><a href="#">Examples</a></li>
+        </ul>
+        <h2>URLs</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem natus omnis sed, 
+            sit eos repellendus facilis animi! Possimus quod odio minima, eum rem earum.
+            Sint beatae distinctio praesentium voluptates impedit.Aliquid iusto ab quos 
+            nostrum repellat nihil quasi. Fugiat maiores beatae aliquid. Autem repellat 
+            voluptatum tenetur consectetur, nam qui. A facilis iusto dolor illo, laboriosam 
+            et beatae est unde quisquam?</p>
+       <a href="#">Back to top</a>
+        <h2>Source Anchors</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem natus omnis sed, 
+            sit eos repellendus facilis animi! Possimus quod odio minima, eum rem earum.
+            Sint beatae distinctio praesentium voluptates impedit.Aliquid iusto ab quos 
+            nostrum repellat nihil quasi. Fugiat maiores beatae aliquid. Autem repellat 
+            voluptatum tenetur consectetur, nam qui. A facilis iusto dolor illo, laboriosam 
+            et beatae est unde quisquam?</p>
+        <a href="#">Back to top</a>
+    </div>
+    <div class="bai6a">
+        <table border="10"> 
+            <tr>
+                <td id="white">1</td><td colspan="3" id="white">2</td>
+            </tr>
+            <tr>
+                <td rowspan="3" id="white">3</td>
+                <td id="orange">4</td>
+                <td id="orange">5</td>
+                <td colspan="2" rowspan="2" id="yellow">6</td>
+            </tr>
+           <tr>
+            <td id="orange">7</td>
+            <td id="orange">8</td>
+           </tr>
+           <tr>
+            <td colspan="2"  id="yellow">9</td>
+            <td colspan="2"  id="yellow">10</td>
+           </tr>
+        </table>
+    </div>
+    <div class="bai6b">
+        <div class="bai6b1">
+            <table border="1">
+                 <tr>
+                    <td>(1)</td>
+                     <td>(2)</td>
+                    <td>(3)</td>
+                    <td colspan="3">(4)</td>
+                    <td>(5)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="5" ><a href="#"  style="color: red;">Part I</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="4"><a href="#" style="color: red;">Chapter 1</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"><a href="#" style="color: red;">Section A</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"><a href="#" style="color: red;">Section B</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="4"><a href="#" style="color: red;">Chapter 2</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"><a href="#" style="color: red;">Section A</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"><a href="#" style="color: red;">Section B</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="5"><a href="#"  style="color: red;">Part II</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="4"><a href="#" style="color: red;">Chapter 3</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"><a href="#" style="color: red;">Section A</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"><a href="#" style="color: red;">Section B</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="4"><a href="#" style="color: red;">Chapter 4</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"><a href="#" style="color: red;">Section A</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="3"><a href="#" style="color: red;">Section B</a></td>
+                    <td></td>
+                </tr>
+            </table>  
+        </div>
+        <div class="bai6b2">
+            <table border="1">
+                <h3>With cellpadding:</h3>
+                 <tr>
+                    <td>6.470</td>
+                    <td>6.470</td>
+                </tr>
+                <tr>
+                    <td>6.470</td>
+                    <td>6.470</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bai6b3">
+            <table border="1">
+                <h3>Table with spanning row:</h3>
+                <tr>
+                    <td>6.470</td>
+                    <td>6.470</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">6.470</td>
+                    <td>6.470</td>
+                </tr>
+                <tr>
+                    <td>6.470</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+       
+   
+    <div class="bai6c">
+        <table border="2">
+            <caption style="color: #942d86; font-weight: bold;">NUMBERS 1-5 in VARIOUS LANGUAGES</caption>
+            <tr>
+                <td style="background-color: rgb(245, 217, 245);"></td>
+                <td><a href="#" style="color: black; font-weight: bold;">English</a></td>
+                <td><a href="#" style="color: black; font-weight: bold;">Espanol</a></td>
+                <td><a href="#" style="color: black; font-weight: bold;">Francais</a></td>
+                <td><a href="#" style="color: black; font-weight: bold;">Italiano</a></td>
+                <td><a href="#" style="color: black; font-weight: bold;">Deutsch</a></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td id="trang">one</td>
+                <td id="trang">uno</td>
+                <td id="trang">un</td>
+                <td id="trang">uno</td>
+                <td id="trang">eins</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td id="trang">two</td>
+                <td id="trang">dos</td>
+                <td id="trang">deux</td>
+                <td id="trang">due</td>
+                <td id="trang">zwei</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td id="trang">three</td>
+                <td id="trang">tres</td>
+                <td id="trang">trois</td>
+                <td id="trang">tre</td>
+                <td id="trang">drei</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td id="trang">four</td>
+                <td id="trang">cuatro</td>
+                <td id="trang">quatre</td>
+                <td id="trang">quattro</td>
+                <td id="trang">vier</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td id="trang">five</td>
+                <td id="trang">cinco</td>
+                <td id="trang">cinq</td>
+                <td id="trang">cinque</td>
+                <td id="trang">fiinf</td>
+            </tr>
+        </table>
+    </div>
+    <div class="bai7">
+        <div class="bai71">
+            <p>
+                <img style="vertical-align:bottom" src="/smile (1).jfif" alt="smile">
+                A smile is a facial expression formed primarily by flexing the muscles at the sides of the mouth. It is
+                belived it takes about 80 muscles to smile. Some smiles include a contraction of the muscles at the corner of the eyes,
+                an action known as a "Duchenne smile". Smiles performed without the eye contraction may be perceived as insincere.</p>
+        </div>
+        <hr>
+        <div class="bai72">
+            <p>
+                <img style="vertical-align: -webkit-baseline-middle;" src="/smile (1).jfif" alt="smile">
+                A smile is a facial expression formed primarily by flexing the muscles at the sides of the mouth. It is
+                belived it takes about 80 muscles to smile. Some smiles include a contraction of the muscles at the corner of the eyes,
+                an action known as a "Duchenne smile". Smiles performed without the eye contraction may be perceived as insincere.</p>
+        </div>
+        <hr>
+        <div class="bai73">
+            <p>
+                <img style="vertical-align: text-top;" src="/smile (1).jfif" alt="smile">
+                A smile is a facial expression formed primarily by flexing the muscles at the sides of the mouth. It is
+                belived it takes about 80 muscles to smile. Some smiles include a contraction of the muscles at the corner of the eyes,
+                an action known as a "Duchenne smile". Smiles performed without the eye contraction may be perceived as insincere.</p>
+        </div>
+        <hr>
+        <div class="bai74">
+            <p>
+                <img style="float:right" src="/smile (1).jfif" alt="smile">
+                A smile is a facial expression formed primarily by flexing the muscles at the sides of the mouth. It is
+                belived it takes about 80 muscles to smile. Some smiles include a contraction of the muscles at the corner of the eyes,
+                an action known as a "Duchenne smile". Smiles performed without the eye contraction may be perceived as insincere.</p>
+        </div>
+        <hr>
+        <div class="bai75">
+            <p>
+                <img style="float:left" src="/smile (1).jfif" alt="smile">
+                A smile is a facial expression formed primarily by flexing the muscles at the sides of the mouth. It is
+                belived it takes about 80 muscles to smile. Some smiles include a contraction of the muscles at the corner of the eyes,
+                an action known as a "Duchenne smile". Smiles performed without the eye contraction may be perceived as insincere.</p>
+        </div>
+    </div>
+    <div class="bai8">
+        <h2>HTML Image</h2>
+        <img src="/pic_trulli.jpg" width="500" height="333" alt="My Place" usemap="#planetmap">
+        <map name="planetmap">
+            <area shape="rect" coords="254,214,298,298" href="A.htm" alt="Sun">
+            <area shape="circle" coords="58,82,40,67" href="B.htm" alt="Mercury">
+        </map>
+    </div>
+    <div class="bai9">
+        <table border="1">
+            <tr>
+
+            </tr>
+            <tr>
+                <td>Character</td>
+                <td>HTML<br>Code*</td>
+                <td>Character<br>Code</td>
+                <td>Description of Character</td>
+            </tr>
+            <tr>
+                <td>&#140</td>
+                <td>&amp&#35 140;</td>
+                <td></td>
+                <td>capital OE ligature</td>
+            </tr>
+            <tr>
+                <td>&#145</td>
+                <td>&amp&#35 145;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+    </div>
+</body>
+
+</html>
