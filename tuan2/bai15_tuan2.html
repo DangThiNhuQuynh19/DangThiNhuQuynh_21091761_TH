@@ -15,6 +15,15 @@
         box-shadow: 0 0 20px rgb(0, 0, 0, 0.9);
         margin-left: 370px;
        }
+       .bai15b{
+        width: 600px;
+        height: 450px;
+        box-shadow: 0 0 20px rgb(0, 0, 0, 0.9);
+        padding: 7px;
+        margin-left: 370px;
+        margin-top: 30px;
+       }
+     
     </style>
     <div class="bai15">
         <fieldset>
@@ -62,7 +71,58 @@
             </table>
         </fieldset>
         <input type="submit" value="Send message">
-
     </div>
+    <div class="bai15b">
+        <fieldset>
+            <legend>Contact Information:</legend>
+            <table>
+                <tr>
+                    <td><label>First name:</label></td>
+                    <td><input type="text" name="firstname" ></td>
+                </tr>
+                <tr>
+                    <td><label>Last name:</label></td>
+                    <td><input type="text" name="lastname" ></td>
+                </tr>
+                <tr>
+                    <td><label>E-mail:</label></td>
+                    <td><input type="email" name="email" ></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Competition Question</legend>
+            <table>
+                <tr>
+                    <input type="radio" id="584ft" name="question" value="584ft">
+                    <label for="584ft">584 ft</label><br>
+                </tr>
+                <tr>
+                    <input type="radio" id="784ft" name="question" value="784ft">
+                    <label for="784ft">784 ft</label><br>
+                </tr>
+                <tr>
+                    <input type="radio" id="984ft" name="question" value="984ft">
+                    <label for="984ft">984 ft</label><br>
+                </tr>
+                <tr>
+                    <input type="radio" id="1184ft" name="question" value="1184ft">
+                    <label for="1184ft">1184 ft</label><br>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Tiebreaker Question</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="question">In 25 words or less, say why you would like to win $10,000:</label><br>
+                        <textarea name="txt" id="question" cols="40" rows="10" tabindex="1"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    
 </body>
 </html>
