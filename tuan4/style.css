@@ -3,13 +3,13 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0;
     margin: 0;
-    color:black;
+    color:#868A90;
 }
 /* Heading */
 #menu {
     display: flex;
     justify-content: space-around;
-    margin-top: 10px;
+    margin-top: 18px;
 }
 
 #left-menu {
@@ -24,22 +24,37 @@
     justify-content: space-around;
     align-items: center;
 }
+
 /* Body */
 #body{
     margin:auto;
     width: 85%;
 }
-#heading-detail{
-    display: flex;
-    justify-content: space-between;
-    width: 350px;
+.text-green{
+    color:#459D7A
 }
+.text-black{
+    color: black;
+}
+.text-white{
+    color: white;
+}
+.vertical{
+    vertical-align:super;
+}
+/* Detail */
 #detail{
     display: flex;
     flex-direction: column;
     margin-top: 80px;
     
 }
+#heading-detail{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+
 #body-detail{
     display: flex;
     justify-content: space-between;
@@ -49,17 +64,14 @@
     justify-content:center;
     margin-top:10px;
 }
-#review{
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-}
-#menu-body {
-    color: yellowgreen;
-}
-
 #big-img{
     position: relative;
+}
+#img-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 550px;
 }
 #bestseller{
     position: absolute;
@@ -70,26 +82,76 @@
     border-radius: 20px;
     border: none;
     right: 10px;
+    color: black;
 }
+#right-body-detail{
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+}
+#price{
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    align-items: center;
+}
+#box-chosse-size{
+    width: 500px; 
+    height: 40px;
+    background-color: #f3f4f6;
+}
+#buttons_added{
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+}
+#quantity{
+    width: 40px;
+    height: 44px;
+    background-color: #f3f4f6;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+#buttons-buy{
+    display: flex;
+    justify-content: space-between;
+}
+#button-add-bag, #add-bag-checkout{
+    width: 240px;
+    height: 50px;
+    border: 1px solid;
+    border-color: #459D7A;
+    background-color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+#add-bag-checkout{
+    background-color: #459D7A;
+}
+
+#review{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+
+
 /* Ingredient */
 #ing {
     display: flex;
     justify-content: space-around;
   
 }
-/* #ing-left >img{
-    border-top: 3%;
-    border-right: 3%;
-} */
+
 #benefit {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-/* #how {
-    margin-left: 30%;
-} */
-
 #footer {
     display: flex;
     justify-content: space-evenly;
