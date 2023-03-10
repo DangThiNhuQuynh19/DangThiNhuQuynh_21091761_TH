@@ -5,9 +5,7 @@
     margin: 0;
     color:black;
 }
-#body{
-    margin:auto;
-}
+/* Heading */
 #menu {
     display: flex;
     justify-content: space-around;
@@ -26,44 +24,63 @@
     justify-content: space-around;
     align-items: center;
 }
-
-#menu-body {
-    color: yellowgreen;
+/* Body */
+#body{
+    margin:auto;
+    width: 85%;
+}
+#heading-detail{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
 }
 #detail{
     display: flex;
     flex-direction: column;
     margin-top: 80px;
-  
+    
 }
 #body-detail{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 #left-body-detail{
     display: flex;
     justify-content:center;
     margin-top:10px;
 }
-#img-detail{
-    margin-left:-100px;
+#review{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
 }
+#menu-body {
+    color: yellowgreen;
+}
+
 #big-img{
     position: relative;
 }
 #bestseller{
     position: absolute;
+    width: 90px;
+    height: 30px;
+    background-color: #ffc970;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    right: 10px;
 }
+/* Ingredient */
 #ing {
     display: flex;
     justify-content: space-around;
-    width: 90%;
-    margin: auto;
+  
 }
-#ing-left >img{
+/* #ing-left >img{
     border-top: 3%;
     border-right: 3%;
-}
+} */
 #benefit {
     display: flex;
     justify-content: space-evenly;
