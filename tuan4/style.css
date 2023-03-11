@@ -184,29 +184,35 @@
 }
 .split{
     width: 1px;
-    height: 25px;
+    height: 40px;
     background-color: #f3f4f6;
 }
 .hover:hover{
-    background-color: #459D7A;
+    background-color: #C3E5D8;
+    border-radius: 3px;
 }
 .hover{
     width: 250px;
     font-size: 20px;
     text-align: center;
-    
+    padding-top: 6px;
 }
 /* Benefit */
 #text-benefit{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
+    height: 450px;
+    padding-bottom: 40px;
 }
-.small-text-benefit{
+.bold-text-benefit{
     font-size: 20px;
     color: black;
     opacity: 80%;
+}
+.small-text-benefit{
+    padding-top: 5px;
+    line-height: 24px;
 }
 #benefit {
     display: flex;
@@ -224,14 +230,20 @@
     display: flex;
     justify-content: space-between;
 }
+.bold-text-ing{
+    color: black;
+    opacity: 80%;
+    font-size: 22px;
+}
 .text-ing{
     width: 350px;
+    padding-top: 5px;
 }
 #ing-left, #ing-center, #ing-right{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 310px;
+    height: 320px;
 }
 #see-full-list{
     width: 180px;
@@ -263,6 +275,30 @@
     font-size: 18px;
 }
 /* Reviews */
+#body-reviews{
+    display: flex;
+    justify-content: space-between;
+}
+#heading-reviews{
+    display: flex;
+    justify-content: space-between;
+}
+#write{
+    width: 160px;
+    height: 30px;
+    border: 1px solid #459D7A;
+    border-radius: 3px;
+    background-color: white;
+    position: relative;
+    color: #459D7A;
+}
+#img-pencil{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 230px;
+    padding-top: 3px;
+}
 #first-review, #second-review, #third-review, #fourth-review, #fiveth-review, #sixth-review{
     display: flex;
     justify-content: space-between;
@@ -273,7 +309,56 @@
     flex-direction: column;
     justify-content: space-between;
     height: 250px;
+    width: 400px;
+    padding-top: 20px;
 }
+.star-review{
+    padding-top: 6px;
+}
+#right-reviews{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px;
+    width: 800px;
+}
+.img-person{
+    width: 45px;
+    height: 45px;
+}
+.flex-person-review{
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+}
+.text-review{
+    font-size: 15px;
+}
+#person1, #person2, #person3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+}
+#number-page{
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
+    padding-left: 50px;
+}
+#range{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #459D7A;
+    border-radius: 50%;
+
+}
+
+.img-star{
+    padding-top: 7px;
+}
+
+
 #footer {
     display: flex;
     justify-content: space-evenly;
