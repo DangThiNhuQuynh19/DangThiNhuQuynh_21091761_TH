@@ -28,7 +28,11 @@
 /* Body */
 #body{
     margin:auto;
-    width: 85%;
+    width: 1122px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 4500px; */
 }
 .text-green{
     color:#459D7A
@@ -39,6 +43,7 @@
 }
 .text-white{
     color: white;
+    opacity: 80%;
 }
 .vertical{
     vertical-align:super;
@@ -230,6 +235,10 @@
     display: flex;
     justify-content: space-between;
 }
+.img-ing{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
 .bold-text-ing{
     color: black;
     opacity: 80%;
@@ -259,20 +268,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 730px;
+    height: 670px;
 }
 #video{
     position: relative;
+}
+#img-video{
+    width: 1090px;
+    height: 600px;
 }
 #linkvideo{
     width: 165px;
     height: 50px;
     background-color: #171A1F;
     position: absolute;
-    top:330px;
+    top:300px;
     margin-left: 45%;
     color: white;
     font-size: 18px;
+    
 }
 /* Reviews */
 #body-reviews{
@@ -351,33 +365,148 @@
     height: 25px;
     border: 1px solid #459D7A;
     border-radius: 50%;
-
+    padding-bottom: 20px;
+    background-color: #FAFBFB;
 }
 
 .img-star{
     padding-top: 7px;
 }
-
-
+#reviews{
+    width: 100%;
+    height: 500px;
+    background-color: #FAFAFB;
+    padding-top: 40px;
+}
+/* FAQs */
+#body-faqs{
+    display: flex;
+    justify-content: space-between;
+}
+#first-left-body-faqs,#second-left-body-faqs, #third-left-body-faqs, #first-right-body-faqs, #second-right-body-faqs, #third-right-body-faqs, #forth-right-body-faqs{
+    width: 520px;
+    border: 1px solid;
+    border-radius: 5px;
+    position: relative;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+#first-left-body-faqs{
+    height: 90px;
+    border: 2px solid #459D7A;
+    padding-top: 17px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.caret{
+    position: absolute;
+    right: 15px;
+    top: 13px;
+}
+.width-text1{
+    width: 480px;
+}
+#second-left-body-faqs{
+    height: 60px;
+    line-height: 21px;
+}
+.width-text2{
+    width: 400px;
+}
+#third-left-body-faqs{
+    height: 60px;
+}
+.width-text3{
+    width: 400px;
+}
+#left-body-faqs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 310px;
+}
+#first-right-body-faqs{
+    height: 40px;
+}
+#second-right-body-faqs{
+    height: 60px;
+}
+.width-text5{
+    width: 400px;
+}
+#third-right-body-faqs{
+    height: 60px;
+}
+.width-text6{
+    width: 400px;
+}
+#forth-right-body-faqs{
+    height: 35px;
+}
+#right-body-faqs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 330px;
+}
+/* Footer */
 #footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 300px;
-    background-color: rgb(31, 28, 28);
-    color: white;
-}
+    height: 401px;
+    background-color: #1D2128;
 
+}
 #left-footer {
     display: flex;
     justify-content: space-around;
     width: 500px;
     line-height: 30px;
+    color: white;
 }
-
 #right-footer {
     display: flex;
     flex-direction: column;
     align-items: initial;
+    justify-content: space-between;
+    height: 160px;
+}
+#About-footer,#Help-footer,#Contact-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#About-footer{
+    height: 240px;
+}
+#Help-footer{
+    height: 150px;
+}
+#Contact-footer{
+    height: 180px;
+}
+.text-size{
+    font-size: 14px;
+}
+#email{
+    display: flex;
+    justify-content: center;
+}
+.input-email{
+    width: 270px;
+    height: 40px;
+    border: 1px solid rgb(216, 214, 214);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #1D2128;
+}
+.subscribe{
+    width: 120px;
+    height: 42px;
+    border: 1px solid #459D7A;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px ;
+    background-color: #459D7A;
 }
