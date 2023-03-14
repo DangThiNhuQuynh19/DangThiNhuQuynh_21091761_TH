@@ -28,11 +28,11 @@
 /* Body */
 #body{
     margin:auto;
-    width: 1122px;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* height: 4500px; */
+    height: 3500px;
 }
 .text-green{
     color:#459D7A
@@ -292,10 +292,14 @@
 #body-reviews{
     display: flex;
     justify-content: space-between;
+    width: 1100px;
+    padding-left: 120px;
 }
 #heading-reviews{
     display: flex;
     justify-content: space-between;
+    width: 1150px;
+    padding-left: 100px;
 }
 #write{
     width: 160px;
@@ -448,6 +452,11 @@
     flex-direction: column;
     justify-content: space-between;
     height: 330px;
+}
+/* FAQS */
+#FAQs{
+    width: 85%;
+    margin: auto;
 }
 /* Footer */
 #footer {
