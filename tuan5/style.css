@@ -14,19 +14,20 @@
     }
     
     #center {
-        width: 830px;
+        width: 800px;
     }
     
     #right {
-        width: 440px;
+        width: 430px;
     }
     
     #left {
-        width: 90px;
+        width: 78px;
         height: 870px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        border-right: 1px solid #d3d6d6;
     }
     
     #left_above {
@@ -59,7 +60,13 @@
     .text-header-center {
         font-size: 25px;
     }
-    
+    #center{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 860px;
+        margin-left: 20px;
+    }
     .first-center {
         display: flex;
         justify-content: space-between;
@@ -72,6 +79,27 @@
         align-items: center;
     }
     
+    .record{
+        width: 85px;
+        height: 35px;
+        border: 2px solid #f88689;
+        border-radius: 30px; 
+        position: relative;
+    }
+    .record-text{
+        font-size: 14px;
+        color: #f22128;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 9px;
+        margin-left: 15px;
+    }
+    .range{
+        font-size: 60px;
+        color: #f22128;
+        position: absolute;
+        margin-top: -21px;
+    }
     .second-center-item1 {
         margin-left: 15px;
     }
@@ -85,8 +113,8 @@
     }
     
     .third-center-box1 {
-        width: 170px;
-        height: 40px;
+        width: 185px;
+        height: 35px;
         border: 1px solid rgb(110, 106, 106);
         border-radius: 3px;
         background-color: rgb(110, 106, 106);
@@ -98,18 +126,102 @@
         font-size: 15px;
         font-weight: 100;
     }
-    
+    .img-big{
+        width:99%;
+    }
     .third-center-box1-text {
         margin-top: 10px;
+        margin-left: 10px;
     }
-    
+    .range-blue{
+        font-size: 60px;
+        color: #1DD75B;
+        position: absolute;
+        margin-top: -20px;
+        
+    }
     .third-center-box2 {
         position: absolute;
         top: 15px;
-        right: 70px;
+        right: 50px;
     }
     
     .fourth-center {
         display: flex;
         justify-content: space-between;
+    }
+    .person1, .person2, .person3{
+        position: relative;
+    }
+    
+    
+    .online{
+        width: 110px;
+        height: 25px;
+        font-size: 12px;
+        border: 1px solid #7c7d7d;
+        border-radius: 8px;
+        background-color: #7c7d7d;
+        opacity: 70%;
+        position: absolute;
+        margin-top: 8px;
+        margin-left: 6px;
+    }
+   
+    .name{
+        margin-left: 18px;
+        margin-top: 6px;
+        color: white;
+    }
+    .range-blue-small{
+        font-size: 50px;
+        color: #1DD75B;
+        position: absolute;
+        margin-top: -20px;
+        margin-left: -8px;
+    }
+    
+    .mic-small{
+        position: absolute;
+        width: 28px;
+        height: 30px;
+        margin-left: 225px;
+        margin-top: 5px;
+        opacity: 70%;
+    }
+    .mic-small2{
+        position: absolute;
+        margin-left: 225px;
+        margin-top: 8px;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        opacity: 70%;
+    }
+    .img-smallperson{
+        border-radius: 10px;
+    }
+
+    .fiveth-center{
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+        margin-left: 160px;
+    }
+    .end{
+        width: 130px;
+        height: 40px;
+        background-color: #f22128;
+        color: white;
+        border-radius: 3px;
+        position: relative;
+    }
+    .end-meeting{
+       position: absolute;
+       margin-top: 10px;
+       margin-left: 15px;
+    }
+    .participants{
+        font-weight: 600;
+        font-size: 22px;
     }
