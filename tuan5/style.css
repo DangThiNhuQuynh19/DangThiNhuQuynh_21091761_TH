@@ -18,7 +18,9 @@
     }
     
     #right {
-        width: 430px;
+        width: 400px;
+        border-left: 1px solid #d3d6d6;
+        font-size: 14px;
     }
     
     #left {
@@ -80,8 +82,8 @@
     }
     
     .record{
-        width: 85px;
-        height: 35px;
+        width: 80px;
+        height: 33px;
         border: 2px solid #f88689;
         border-radius: 30px; 
         position: relative;
@@ -224,4 +226,90 @@
     .participants{
         font-weight: 600;
         font-size: 22px;
+    }
+    .num-participants{
+       
+        width: 20px;
+        height: 25px;
+        border-radius: 30px;
+        background-color: #fdf2f4;
+        font-size: 14px;
+        position: relative;
+    }
+    .num4-participants{
+        color: #f88689;
+        margin-top: 5px;
+        margin-left: 5px;
+        position: absolute;
+    }
+    .box-add{
+        position: relative;
+        width: 60px;
+        height: 30px;
+        border: 1px solid #f88689;
+        border-radius: 5px;
+    }
+    .add{
+        position: absolute;
+        color: #f22128;
+        margin-top: 7px;
+        margin-left: 10px;
+    }
+    .first-top-right{
+        display: flex;
+        justify-content: space-between;
+    }
+    .left-first_top_right{
+        display: flex;
+    }
+    .top-right{
+        width: 360px;
+        margin-left: 15px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 240px;
+        border-bottom: 1px solid #d3d6d6;
+    }
+    .more{
+        font-size: 26px;
+        color: #7c7d7d;
+        font-weight: 700;
+    }
+    .second-top-right, .third-top-right, .fourth-top-right, .fiveth-top-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .left-second_top_right{
+        display: flex;
+        justify-content: space-between;
+        width: 170px;
+        align-items: center;
+    }
+    .right-second_top_right{
+        display: flex;
+        justify-content: space-between;
+        width: 80px;
+        height: 20px;
+        align-items: center;
+    }
+    .left-third_top_right{
+        display: flex;
+        justify-content: space-between;
+        width: 140px;
+        align-items: center;
+    }
+    .left-fourth_top_right{
+        display: flex;
+        justify-content: space-between;
+        width: 130px;
+        align-items: center;
+    }
+    .left-fiveth_top_right{
+        display: flex;
+        justify-content: space-between;
+        width: 135px;
+        align-items: center;
     }
