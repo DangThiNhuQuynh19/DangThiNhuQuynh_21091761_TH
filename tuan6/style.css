@@ -4,7 +4,8 @@
 }
 
 .wrapper {
-    width: 20%;
+    width: 25%;
+    height: 570px;
     margin: auto;
     box-shadow: 0 0 10px;
 }
@@ -37,14 +38,25 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 70px 70px 70px 70px;
     column-gap: 10px;
     row-gap: 10px;
+    margin-left: 15px;
+    margin-top: 20px;
 }
 
 .grid-item {
     text-align: center;
     padding: 15px 0px;
-    border: none;
     font-size: 25px;
+    border: 1px solid white;
+}
+.grid-item:hover{
+    background-color: inherit;
+}
+.grid-item:active{
+    background-color: #ffef78;
+}
+.pink{
+    background-color: #d72880;
 }
