@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        function ktTenDN(){
+            let ten = document.getElementById('fullname').value;
+            let patten = /^[A-Za-z ]+$/;
+            if(patten.test(ten)){
+                document.getElementById('erten').innerHTML = "";
+                return true;
+            }else {
+                document.getElementById('erten').style.color ='red';
+                document.getElementById('erten').innerHTML = "Tên đăng nhập gồm các chữ cái a-z"
+                return false;
+            }
+        }
+        function ktMk(){
+            let mk = document.getElementById('psw').value;
+            let patten = /^[0-9]{3,}$/;
+            if(patten.test(mk)){
+                document.getElementById('ermk').innerHTML = "";
+                return true;
+            }else {
+                document.getElementById('ermk').style.color = 'red';
+                document.getElementById('ermk').innerHTML = "Mat khau la cac chu so";
+                return false;
+            }
+        }
+        function ktsdt(){
+            let sdt = document.getElementById('phone-number').value;
+            let patten =  /((09|03|07|08|05)+([0-9]{8})\b)/g;
+            if(patten.test(sdt)){
+                document.getElementById('erphone').innerHTML = "";
+                return true;
+            }else {
+                document.getElementById('erphone').style.color = 'red';
+                document.getElementById('erphone').innerHTML = "So dien thoai khong chinh xac";
+                return false;
+            }
+        }
+        function ktemail(){
+            let email = document.getElementById('email').value;
+            let patten =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(patten.test(email)){
+                document.getElementById('eremail').innerHTML = "";
+                return true;
+            }else {
+                document.getElementById('eremail').style.color = 'red';
+                document.getElementById('eremail').innerHTML = "Email khong chinh xac";
+                return false;
+            }
+        }
+        let stt=1
+            function ketqua(){
+                if(ktTenDN() && ktMk() && ktsdt() && ktemail){
+                    let ten = document.getElementById('fullname').value;
+                    let mk = document.getElementById('psw').value;
+                    let hoten = document.getElementById('name').value;
+                    let ngaysinh = document.getElementById('date').value;
+                    let gioitinh = document.getElementById('gender').value;
+                    let diachi = document.getElementById('address').value;
+                    let sdt = document.getElementById('phone-number').value;
+                    let email = document.getElementById('email').value;
+                    let row_moi = "<tr><td>" + stt +"</td><td>" + ten + "</td><td>" + mk + "</td><td>"+ hoten +"</td><td>" + ngaysinh + "</td><td>" + gioitinh + "</td><td>" + diachi + "</td><td>" + sdt + "</td><td>" + email + "</td></tr>";
+                    document.getElementById('tbl').innerHTML+=row_moi;
+                    
+                    stt++;
+                }
+                
+            }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <h2>Đăng ký thành viên</h2> -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg " data-toggle="modal" data-target="#myModal">Đăng ký</button>
+        <table class="table table-bordered m-3" id="tbl">
+            <tr>
+                <th>STT</th>
+                <th>Tên đăng nhập</th>
+                <th>Mật khẩu</th>
+                <th>Họ và tên</th>
+                <th>Ngày sinh</th>
+                <th>Giới tính</th>
+                <th>Địa chỉ</th>
+                <th>Điện thoại</th>
+                <th>Email</th>
+            </tr>
+        </table>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Đăng ký</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="row text-center text-primary mb-5 mt-5">
+                                <div class="col-12">
+                                    <h1>ĐĂNG KÝ TÀI KHOẢN</h1>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3 text-right">
+                                    <label for="">Nhập tên đăng nhập:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="fullname" id="fullname" class="form-control" onblur ="ktTenDN()" placeholder="Nhập vào tên đăng nhập">
+                                </div>
+                                <div class="col-1">
+                                    <span  class="text-danger">*</span>
+                                </div>
+                                <div id="erten"></div>
+                            </div>
+                            
+                            <div class="row mb-2">
+                                <div class="col-3 text-right">
+                                    <label for="">Mật khẩu:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="password" name="psw" id="psw" class="form-control" onblur="ktMk()" placeholder="Nhập vào mật khẩu">
+                                </div>
+                                <div class="col-1">
+                                    <span class="text-danger">*</span>
+                                </div>
+                                <div id="ermk"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3 text-right">
+                                    <label for="">Họ và tên:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="name" id="name" class="form-control" onblur="ktTenDN()" placeholder="Nhập vào họ tên">
+                                </div>
+                                <div class="col-1">
+                                    <span class="text-danger">*</span>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3 text-right">
+                                    <label for="">Ngày sinh:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="date" class="form-control" id="date" >
+                                </div>
+                                <div class="col-1">
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3 text-right">
+                                    <label for="">Giới tính:</label>
+                                </div>
+                                <div class="col-8" id="gender">
+                                    <input type="radio" name="gender"> <span>Nam</span>
+                                    <input type="radio" name="gender"> <span>Nữ</span>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3 text-right">
+                                    <label for="">Địa chỉ:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="address" id="address" class="form-control" placeholder="Nhập vào địa chỉ">
+                                </div>
+                                <div class="col-1">
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3 text-right">
+                                    <label for="">Điện thoại:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="phone-number" id="phone-number" class="form-control" placeholder="Nhập vào số điện thoại (9-10 số)">
+                                </div>
+                                <div class="col-1">
+                                </div>
+                                <div id="erphone"></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-3 text-right">
+                                    <label for="">Email:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Nhập vào Email ten@gmail.com">
+                                </div>
+                                <div class="col-1">
+                                    <span class="text-danger">*</span>
+                                </div>
+                                <div id="eremail"></div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-12 text-center">
+                                    <input type="button" class="btn btn-dark" value="Đăng ký" onclick="ketqua()">
+    
+                                </div>
+                            </div>
+                        </form>
+                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

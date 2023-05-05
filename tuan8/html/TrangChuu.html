@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrangChu</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="header d-flex justify-content-lg-around">
+        <img class="ml-5 mt-5" src="../img/logo.PNG" alt="">
+        <div class="mt-5 mr-5">
+            <h2 class="ml-4">DOAN THANH NIEN THANH PHO HO CHI MINH</h2>
+            <h5 class="text-danger">DOAN THANH NIEN TRUONG DAI HOC CONG NGHIEP THANH PHO HO CHI MINH</h5>
+        </div>
+    </div>
+    <div class="container-main mt-5">
+        <div class="menu bg-light ">
+            <a class="ml-3" href="#">TRANG CHU</a>
+            <a class="ml-3" href="#">DOAN THE</a>
+            <a class="ml-3" href="#">SU KIEN</a>
+            <select class="ml-3" name="" id="">
+                <option value="DANG KY">DANG KY</option>
+                <option value="THAM GIA">THAM GIA</option>
+            </select>
+        </div>
+        <div class="new mt-5 d-flex justify-content-around">
+            <img class="rounded-circle" src="../img/ngayhoithanhnien.JPG" alt="">
+            <div>
+                <h3 class="text-success">TIN NOI BAT</h3>
+                <ol type="I" class="bg-light">
+                    <li>Mua he xanh</li>
+                    <li>Thanh nien tinh nguyen</li>
+                    <li>Tam long vang</li>
+                    <li>Hien mau nhan dao</li>
+                    <li>Bao ve moi truong sach</li>
+                    <li>Thi dua lap thanh tich chao mung 26/3</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h3 class="text-center mt-5">DANH SACH DANG KY HOAT DONG MUA HE XANH</h3>
+            <button type="button" data-toggle="modal" data-target="#formdk">DANG KY</button>
+            <table class=" table table-bordered mt-3 " id="tbl ">
+                <tr>
+                    <th>STT</th>
+                    <th>Ma SV</th>
+                    <th>Ten SV</th>
+                    <th>Ngay Tham Gia</th>
+                    <th>Email</th>
+                    <th>So Dien Thoai</th>
+                </tr>
+            </table> 
+            <div class="modal" id="formdk" role="dialog">
+                <div class="modal-dialog modal-lg ">
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <h1 class="modal-title text-danger ">THONG TIN DANG KY</h1>
+                            <button type="button"  class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body ">
+                            <form action=" ">
+                                <div class="row form-group ">
+                                    <label class="col-12">Mã sinh vien</label>
+                                    <div class="col-9 ">
+                                        <input type="text " class="form-control " id="txtMaSV " placeholder="Ma sinh vien ">
+                                        <span id="errMaSV " class="text-danger ">*</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group ">
+                                    <label class="col-9 ">Họ tên</label>
+                                    <div class="col-9 ">
+                                        <input type="text " class="form-control " id="txtHT " placeholder="Ho ten ">
+                                        <span id="errMaSV " class="text-danger ">*</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group ">
+                                    <label class="col-9  ">Ngày tham gia</label>
+                                    <div class="col-9 ">
+                                        <input type="date " class="form-control " id="dateTG " placeholder="Ho ten ">
+                                        <span id="errMaSV " class="text-danger ">*</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-9 text-center">
+                                        <input type="button" class="btn btn-dark" value="Lưu">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" class="btnClose">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <div>
+</body>
+</html>
+
