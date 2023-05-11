@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.6.4.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/register.js"></script>
+    <style>
+       .child button {
+            border: none;
+            width: 120px;
+            height: 30px;
+        }
+
+    .child {
+        display: none;
+    }
+
+    .sub:hover .child {
+        display: block;
+    }
+    </style>
 </head>
 <body>
     <div class="header d-flex justify-content-lg-around">
@@ -17,16 +33,29 @@
             <h5 class="text-danger">DOAN THANH NIEN TRUONG DAI HOC CONG NGHIEP THANH PHO HO CHI MINH</h5>
         </div>
     </div>
-    <div class="container-main mt-5">
-        <div class="menu bg-light ">
-            <a class="ml-3" href="#">TRANG CHU</a>
-            <a class="ml-3" href="#">DOAN THE</a>
-            <a class="ml-3" href="#">SU KIEN</a>
-            <select class="ml-3" name="" id="">
-                <option value="DANG KY">DANG KY</option>
-                <option value="THAM GIA">THAM GIA</option>
-            </select>
+    <div class="container-main mt-5 pl-5">
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">TRANG CHỦ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">ĐOÀN THỂ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">SỰ KIỆN</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDrop" data-toggle="dropdown">HOẠT ĐỘNG</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="#" class="dropdown-item" data-toggle="modal" data-target="#formdk">ĐĂNG KÝ</a>
+                        <a href="#" class="dropdown-item">THAM GIA</a>
+                    </div>
+                </li>
+            </ul>
         </div>
+       </nav>
         <div class="new mt-5 d-flex justify-content-around">
             <img class="rounded-circle" src="../img/ngayhoithanhnien.JPG" alt="">
             <div>
@@ -43,7 +72,7 @@
         </div>
         <div class="container">
             <h3 class="text-center mt-5">DANH SACH DANG KY HOAT DONG MUA HE XANH</h3>
-            <button type="button" data-toggle="modal" data-target="#formdk">DANG KY</button>
+           
             <table class=" table table-bordered mt-3 " id="tbl ">
                 <tr>
                     <th>STT</th>
@@ -58,35 +87,49 @@
                 <div class="modal-dialog modal-lg ">
                     <div class="modal-content ">
                         <div class="modal-header ">
-                            <h1 class="modal-title text-danger ">THONG TIN DANG KY</h1>
+                            <h1 class="modal-title text-danger ml-5 ">THÔNG TIN ĐĂNG KÝ</h1>
                             <button type="button"  class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body ">
-                            <form action=" ">
+                            <form action=" " class="ml-5"> 
                                 <div class="row form-group ">
-                                    <label class="col-12">Mã sinh vien</label>
-                                    <div class="col-9 ">
-                                        <input type="text " class="form-control " id="txtMaSV " placeholder="Ma sinh vien ">
-                                        <span id="errMaSV " class="text-danger ">*</span>
+                                    <label class="col-12">Mã sinh viên</label>
+                                    <div class="col-10 ">
+                                        <input type="text " class="form-control " id="txtMaSV" placeholder="Mã sinh viên " onblur="ktMaSV()">
+                                        <span id="errMaSV" class="text-danger ">*</span>
                                     </div>
                                 </div>
                                 <div class="row form-group ">
-                                    <label class="col-9 ">Họ tên</label>
-                                    <div class="col-9 ">
-                                        <input type="text " class="form-control " id="txtHT " placeholder="Ho ten ">
-                                        <span id="errMaSV " class="text-danger ">*</span>
+                                    <label class="col-12 ">Họ tên</label>
+                                    <div class="col-10 ">
+                                        <input type="text " class="form-control " id="txtHT" placeholder="Họ tên" onblur="ktName()">
+                                        <span id="errName" class="text-danger ">*</span>
                                     </div>
                                 </div>
                                 <div class="row form-group ">
-                                    <label class="col-9  ">Ngày tham gia</label>
-                                    <div class="col-9 ">
-                                        <input type="date " class="form-control " id="dateTG " placeholder="Ho ten ">
-                                        <span id="errMaSV " class="text-danger ">*</span>
+                                    <label class="col-12  ">Ngày tham gia</label>
+                                    <div class="col-10 ">
+                                        <input type="date" class="form-control " id="dateTG" placeholder="mm/dd/yyyy" onblur="ktDate()">
+                                        <span id="errDate" class="text-danger ">*</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group ">
+                                    <label class="col-12 ">Email</label>
+                                    <div class="col-10">
+                                        <input type="email" class="form-control " id="txtEmail" placeholder="Địa chỉ email" onblur="ktEmail()">
+                                        <span id="errEmail" class="text-danger ">*</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group ">
+                                    <label class="col-12">Số điện thoại</label>
+                                    <div class="col-10">
+                                        <input type="text" class="form-control " id="phoneNumber" placeholder="Số điện thoại" onblur="ktPhone()">
+                                        <span id="errPhone" class="text-danger ">*</span>
                                     </div>
                                 </div>
                                 <div class="row form-group">
-                                    <div class="col-9 text-center">
-                                        <input type="button" class="btn btn-dark" value="Lưu">
+                                    <div class="col-12 text-center">
+                                        <input type="button" class="btn btn-danger" value="Lưu" onclick="ketqua()">
                                     </div>
                                 </div>
                             </form>
