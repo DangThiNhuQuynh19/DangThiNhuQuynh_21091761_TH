@@ -71,7 +71,11 @@
                     let mk = document.getElementById('psw').value;
                     let hoten = document.getElementById('name').value;
                     let ngaysinh = document.getElementById('date').value;
-                    let gioitinh = document.getElementById('gender').value;
+                    let gioitinh =  null;
+                    const gt = document.querySelector('input[name="gender"]:checked');
+                    if(gt){
+                        gioitinh = gt.value;
+                    }
                     let diachi = document.getElementById('address').value;
                     let sdt = document.getElementById('phone-number').value;
                     let email = document.getElementById('email').value;
@@ -171,8 +175,8 @@
                                     <label for="">Giới tính:</label>
                                 </div>
                                 <div class="col-8" id="gender">
-                                    <input type="radio" name="gender"> <span>Nam</span>
-                                    <input type="radio" name="gender"> <span>Nữ</span>
+                                    <input type="radio" name="gender" value="Nam"> <span>Nam</span>
+                                    <input type="radio" name="gender" value="Nữ"> <span>Nữ</span>
                                 </div>
                                 <div class="col-1"></div>
                             </div>
