@@ -56,10 +56,11 @@ function ktPhone() {
 }
 let stt=1
     function ketqua() {
+        event.preventDefault();
         if(ktMaSV() && ktName() && ktDate() && ktEmail() && ktPhone()) {
             let ma = document.getElementById('txtMaSV').value;
             let name = document.getElementById('txtHT').value;
-            let ngaytg = new Date(document.getElementById('dateTG').value);
+            let ngaytg = (document.getElementById('dateTG').value);
             let email = document.getElementById('txtEmail').value;
             let sdt = document.getElementById('phoneNumber').value;
 
